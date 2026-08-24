@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Meetings and Schedule | ORCA at CU Boulder</title>
+<meta name="description" content="General meetings every other week, open to all CU Boulder students. Schedule, times, and rooms.">
+
+<!-- Open Graph: controls the link preview when this page is pasted into a
+     message or an Instagram story. Replace [[SITE_URL]] with the live site
+     address, for example https://cuorca.netlify.app -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ORCA at CU Boulder">
+<meta property="og:title" content="ORCA Meetings">
+<meta property="og:description" content="Open to everyone. No sign-up, nothing to prepare, about an hour.">
+<meta property="og:image" content="[[SITE_URL]]/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ORCA, the Options, Risk, and Capital Association at the University of Colorado Boulder.">
+<meta property="og:url" content="[[SITE_URL]]/meetings.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ORCA Meetings">
+<meta name="twitter:description" content="Open to everyone. No sign-up, nothing to prepare, about an hour.">
+<meta name="twitter:image" content="[[SITE_URL]]/assets/og-image.png">
+<link rel="canonical" href="[[SITE_URL]]/meetings.html">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta name="theme-color" content="#141414">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Marks the page as script-enabled so the fade-in styles only apply when
+     JavaScript is actually running. Without this, a script failure would
+     leave sections invisible. -->
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================================================
+     SITE HEADER
+     KEEP THIS IDENTICAL ACROSS ALL PAGES.
+     If you change a link here, make the same change in every other
+     .html file in this folder. The only line that differs from page
+     to page is the aria-current="page" marker, which highlights the
+     page you are currently on.
+     ============================================================ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/orca-wordmark-light.svg" alt="ORCA, home" width="1260" height="303">
+    </a>
+
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="nav__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-menu" aria-label="Main">
+      <div>
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="meetings.html" aria-current="page">Meetings</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__cta"><a class="btn btn--primary" href="join.html">Join ORCA</a></div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- ==================== END SITE HEADER ==================== -->
+
+<main id="main">
+
+<section class="page-head">
+  <svg class="fin-watermark" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z" fill="currentColor"/></svg>
+  <div class="wrap page-head__inner">
+    <p class="label">Meetings</p>
+    <h1 class="h1">When we meet.</h1>
+    <p>General meetings every other week, open to every CU Boulder student.</p>
+  </div>
+</section>
+
+
+<section class="section section--tight">
+  <div class="wrap wrap--narrow">
+    <div data-next-meeting="light"></div>
+
+    <noscript>
+      <div class="callout callout--light">
+        <p style="margin:0"><strong>Next meeting:</strong> [[MEETING_DAY_TIME]] in [[BUILDING_ROOM]].</p>
+        <p class="tiny" style="margin:.75rem 0 0">The schedule below needs JavaScript. <a class="link" href="join.html">Join the mailing list</a> for current dates.</p>
+      </div>
+    </noscript>
+
+    <div class="btn-row" style="margin-top:1.5rem" data-calendar-holder>
+      <button class="btn btn--ghost" type="button" data-add-to-calendar>Add to calendar</button>
+    </div>
+    <p class="tiny text-muted" data-calendar-label style="margin-top:.5rem"></p>
+  </div>
+</section>
+
+
+<section class="section section--paper2">
+  <div class="wrap">
+    <p class="label">Cadence</p>
+    <h2 class="h1 measure">Three kinds of meeting.</h2>
+    <p class="lead">You only need the first one.</p>
+
+    <div class="grid grid--3" style="margin-top:2.5rem">
+      <article class="card reveal">
+        <span class="card__num">General</span>
+        <h3>Every other week</h3>
+        <p><strong>Open to everyone.</strong> The main meeting, and the one to come to first.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">Analyst</span>
+        <h3>Alternating weeks</h3>
+        <p><strong>Analysts and the Executive Board.</strong> Analysts present work and take questions.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">Exec</span>
+        <h3>At least monthly</h3>
+        <p><strong>Executive Board only.</strong> Planning, budget, programming.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap wrap--narrow">
+    <p class="label">Upcoming</p>
+    <h2 class="h1">Schedule</h2>
+    <p class="lead" style="margin-bottom:2.5rem">[[SEMESTER_DATES]]. Past dates drop to the bottom on their own.</p>
+
+    <div data-schedule-upcoming></div>
+
+    <noscript>
+      <div class="empty-state">
+        <h3>The schedule needs JavaScript</h3>
+        <p><a class="link" href="join.html">Join the mailing list</a> and every date comes to you. Or email <a class="link" href="mailto:orca@colorado.edu">orca@colorado.edu</a>.</p>
+      </div>
+    </noscript>
+  </div>
+</section>
+
+
+<section class="section section--tight" data-past-section hidden>
+  <div class="wrap wrap--narrow">
+    <p class="label">Past</p>
+    <h2 class="h2">Earlier this semester</h2>
+    <div data-schedule-past style="margin-top:1.5rem"></div>
+  </div>
+</section>
+
+
+<section class="section section--dark">
+  <div class="wrap wrap--narrow">
+    <p class="label">Before you come</p>
+    <h2 class="h1">What a first meeting is like</h2>
+
+    <ul class="fin-list" style="margin-top:2rem">
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>Can I just show up?</strong> Yes. No sign-up, no list at the door.</div></li>
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>How long?</strong> About an hour.</div></li>
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>Do I prepare anything?</strong> No.</div></li>
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>What happens?</strong> Half a topic walkthrough, half discussion and worked examples.</div></li>
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>Will I be called on?</strong> Not unless you want to be.</div></li>
+      <li><svg class="fin" viewBox="0 0 356.89 301.73" aria-hidden="true" focusable="false"><path class="fin-body" d="M 325,3.27 C 297.55,10.46 268.29,21.22 238.08,35.22 C 201.87,52.01 163.46,76.01 135.07,99.59 C 98.72,129.79 66.73,166.68 42.48,206.35 C 34.33,219.69 21.09,244.86 16.32,256.11 C 11.32,267.9 6.82e-13,298.56 7.96e-13,300.33 C 7.96e-13,301.28 3.86,299.17 10.75,294.45 C 59.41,261.1 116.23,238.68 173,230.43 C 213.97,224.47 252.85,227.6 284.72,239.42 C 303.72,246.47 325.9,259.27 340.75,271.76 C 344.74,275.12 348,277.46 348,276.96 C 348,276.46 346.14,273 343.87,269.26 C 337.83,259.32 330.6,242.73 325.04,226.03 C 316.52,200.51 313.52,180.82 313.64,151.35 C 313.79,113.53 318.99,86.67 338.55,22.53 C 344.13,4.24 344.33,1.96 340.45,0.47 Z"/><path class="fin-swoosh" d="M 185,252.48 C 183.63,252.68 178.45,253.34 173.5,253.94 C 140.06,257.99 100.58,270.12 67.51,286.5 C 52.16,294.1 49.97,295.76 59.65,292.47 C 100.37,278.62 171.54,269.53 214,272.76 C 265.71,276.69 295.53,282.75 355.49,301.51 C 359.35,302.72 355.01,298.95 345.07,292.45 C 313.22,271.62 274.84,258.09 234.14,253.33 C 222.95,252.02 191.91,251.49 185,252.48"/></svg><div><strong>Never invested anything?</strong> That is the most common starting point in the room.</div></li>
+    </ul>
+
+    <div class="btn-row" style="margin-top:2rem">
+      <a class="btn btn--primary" href="join.html">Sign up</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER
+     KEEP THIS IDENTICAL ACROSS ALL PAGES.
+     If you change a link here, make the same change in every other
+     .html file in this folder.
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img class="brand" src="assets/orca-wordmark-light.svg" alt="ORCA" width="1260" height="303">
+        <p>Options, Risk, and Capital Association. University of Colorado Boulder.</p>
+      </div>
+
+      <div>
+        <h2>Site</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="meetings.html">Meetings</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Connect</h2>
+        <ul class="footer-links">
+          <li><a href="mailto:orca@colorado.edu">orca@colorado.edu</a></li>
+          <li><a href="https://campusgroups.colorado.edu/feeds?type=club&amp;type_id=36342&amp;tab=about" rel="noopener">BuffConnect</a></li>
+          <li><a href="join.html">Mailing list</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>ORCA is a registered student organization at the University of Colorado Boulder. It does not speak for the university. Educational only: nothing here is investment advice, and the club does not manage, pool, or invest real money.</p>
+      <p>&copy; 2026 Options, Risk, and Capital Association &middot; <a href="legal.html">Legal</a></p>
+    </div>
+  </div>
+</footer>
+<!-- ==================== END SITE FOOTER ==================== -->
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
