@@ -312,8 +312,8 @@
         mount.innerHTML =
           '<div class="' + boxClass + '">' +
             '<dl>' +
-              '<div><dt>Next general meeting</dt><dd>[[MEETING_DAY_TIME]]</dd></div>' +
-              '<div><dt>Where</dt><dd>[[BUILDING_ROOM]]</dd></div>' +
+              '<div><dt>Next general meeting</dt><dd>Wednesday, September 16, 6:30 to 7:30 PM</dd></div>' +
+              '<div><dt>Where</dt><dd>KOBL 320</dd></div>' +
               '<div><dt>Who can come</dt><dd>Anyone. No sign-up.</dd></div>' +
             '</dl>' +
             '<p class="tiny" style="margin:1.25rem 0 0">' +
@@ -327,12 +327,10 @@
         '<div class="' + boxClass + '">' +
           '<dl>' +
             '<div><dt>Next ' + esc(meeting.type.toLowerCase()) + ' meeting</dt>' +
-              '<dd>' + esc(formatDate(meeting)) + '</dd></div>' +
-            '<div><dt>Time</dt><dd>' + esc(formatTime(meeting)) + '</dd></div>' +
+              '<dd>' + esc(formatDate(meeting)) + ', ' + esc(formatTime(meeting)) + '</dd></div>' +
             '<div><dt>Where</dt><dd>' + esc(meeting.location || "[[BUILDING_ROOM]]") + '</dd></div>' +
+            '<div><dt>Who can come</dt><dd>Anyone. No sign-up.</dd></div>' +
           '</dl>' +
-          '<p style="margin:1.25rem 0 0"><strong>' + esc(meeting.topic || "") + '</strong></p>' +
-          (meeting.note ? '<p class="tiny" style="margin:.5rem 0 0">' + esc(meeting.note) + '</p>' : "") +
         '</div>';
     });
   }
@@ -343,16 +341,12 @@
      -------------------------------------------------------------------------- */
   function meetingItemHTML(meeting, state) {
     var classes = "timeline__item" + (state ? " " + state : "");
-    var typeClass = "chip chip--" + String(meeting.type || "").toLowerCase();
 
     return '<li class="' + classes + '">' +
       '<span class="timeline__date">' + esc(formatDate(meeting)) + '</span>' +
-      '<h3 class="timeline__topic">' + esc(meeting.topic || "Topic to be announced") + '</h3>' +
       '<p class="timeline__meta">' +
         '<span>' + esc(formatTime(meeting)) + '</span>' +
         '<span>' + esc(meeting.location || "[[BUILDING_ROOM]]") + '</span>' +
-        '<span class="' + typeClass + '">' + esc(meeting.type || "") + '</span>' +
-        (state === "is-next" ? '<span class="chip chip--next">Next up</span>' : "") +
       '</p>' +
       (meeting.note ? '<p class="tiny text-muted" style="margin:.5rem 0 0">' + esc(meeting.note) + '</p>' : "") +
     '</li>';
