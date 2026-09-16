@@ -40,65 +40,33 @@
    The site sorts past from upcoming on its own. You never need to delete old
    meetings. Leaving them in shows new members what we actually cover.
 
-   Copy an existing block below, edit its values, and add as many meetings as
-   you like.
+   An example block is commented out below. Remove the comment markers around
+   it, edit the values, and add as many blocks as you like.
    ============================================================================ */
 
 const MEETINGS = [
+
+  /* ---------- EXAMPLE ----------
   {
-    date: "2026-09-16",
+    date: "2026-09-03",
     time: "18:30",
     endTime: "19:30",
     type: "General",
-    topic: "General Meeting #1",
-    location: "KOBL 320",
-    note: ""
+    topic: "What an option actually is",
+    location: "[[BUILDING_ROOM]]",
+    note: "First meeting. No experience needed."
   },
   {
-    date: "2026-09-30",
+    date: "2026-09-10",
     time: "18:30",
     endTime: "19:30",
-    type: "General",
-    topic: "General Meeting #2",
-    location: "KOBL 320",
-    note: ""
+    type: "Analyst",
+    topic: "Position sizing",
+    location: "[[BUILDING_ROOM]]",
+    note: "Analysts and Executive Board only."
   },
-  {
-    date: "2026-10-14",
-    time: "18:30",
-    endTime: "19:30",
-    type: "General",
-    topic: "General Meeting #3",
-    location: "KOBL 320",
-    note: ""
-  },
-  {
-    date: "2026-10-28",
-    time: "18:30",
-    endTime: "19:30",
-    type: "General",
-    topic: "General Meeting #4",
-    location: "KOBL 320",
-    note: ""
-  },
-  {
-    date: "2026-11-11",
-    time: "18:30",
-    endTime: "19:30",
-    type: "General",
-    topic: "General Meeting #5",
-    location: "KOBL 320",
-    note: ""
-  },
-  {
-    date: "2026-12-02",
-    time: "18:30",
-    endTime: "19:30",
-    type: "General",
-    topic: "General Meeting #6",
-    location: "KOBL 320",
-    note: ""
-  }
+  ------------------------------ */
+
 ];
 
 
