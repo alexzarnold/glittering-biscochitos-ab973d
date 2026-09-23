@@ -9,8 +9,12 @@
   # Everything lives in the top level of this folder, so that is what we publish.
   publish = "."
 
-  # There is nothing to compile. Leaving this empty is deliberate.
-  command = ""
+  # Only the /research section is generated (from Markdown in _research/).
+  # Every other page is still plain HTML served exactly as written.
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 # ----------------------------------------------------------------------------
 # Security headers. Sensible defaults for a static site.
@@ -49,6 +53,11 @@
 [[redirects]]
   from = "/meetings"
   to = "/meetings.html"
+  status = 301
+
+[[redirects]]
+  from = "/research"
+  to = "/research/index.html"
   status = 301
 
 [[redirects]]

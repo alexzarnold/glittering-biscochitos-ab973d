@@ -1,0 +1,11 @@
+{
+  "siteUrl": "https://orcacuboulder.netlify.app",
+  "defaultAuthor": "Alex Arnold",
+  "pillars": [
+    { "slug": "options",          "name": "Options Strategies",       "blurb": "Structures, payoffs, and how a trade behaves as the Greeks move." },
+    { "slug": "vol-rates",        "name": "Volatility and Rates",     "blurb": "Implied versus realized, term structure, skew, and the rates curve." },
+    { "slug": "market-structure", "name": "Market Structure",         "blurb": "Who trades, how orders flow, and why liquidity is where it is." },
+    { "slug": "macro",            "name": "Macro Themes",             "blurb": "The economic backdrop that sets the price of risk." }
+  ],
+  "rotation": ["options", "vol-rates", "market-structure", "macro"]
+}
