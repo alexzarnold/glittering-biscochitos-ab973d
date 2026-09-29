@@ -3,8 +3,9 @@
 The website for the **Options, Risk, and Capital Association** at the
 University of Colorado Boulder.
 
-Plain HTML, CSS, and JavaScript. No frameworks, no build step, no npm, no
-terminal required. If you can edit a text file and drag a folder into a
+Plain HTML, CSS, and JavaScript. No frameworks and no terminal required for
+anything except the Research section (see section 12), which Netlify builds
+from Markdown on every push. If you can edit a text file and drag a folder into a
 browser window, you can run this site.
 
 ---
@@ -24,6 +25,7 @@ browser window, you can run this site.
 10. [Handing the site to next year's board](#10-handing-the-site-to-next-years-board)
 10b. [The diving orca](#10b-the-diving-orca)
 11. [When something breaks](#11-when-something-breaks)
+12. [Publishing research](#12-publishing-research)
 
 ---
 
@@ -480,3 +482,115 @@ system sans-serif. The layout will hold; it just looks less like the brand.
 
 **Everything looks unstyled.** `styles.css` is missing or was renamed. It has
 to sit next to the HTML files with exactly that name.
+
+---
+
+## 12. Publishing research
+
+The Research section (`/research`) publishes one piece a week, rotating
+through four pillars: Options Strategies, Volatility and Rates, Market
+Structure, and Macro Themes. It is the one part of the site that is generated
+instead of hand-written, so each post gets a real page that Google can index
+and that shows a proper preview when shared on LinkedIn or iMessage.
+
+**This only works with Option B (GitHub) deployment.** Drag-and-drop deploys
+skip the build, so the Research pages will be missing.
+
+### Where things live
+
+```
+_research/
+  config.json          Pillar names, rotation order, default author, site URL
+  orca.mplstyle        Brand chart style for matplotlib
+  posts/
+    _template/         Copy this. Folders starting with _ are never published.
+    2026-09-28-why-skew-steepens/
+      index.md         The post
+      chart.png        Any images it uses, in the same folder
+scripts/
+  build-research.mjs   Netlify runs this. You should not need to edit it.
+  new-post.mjs         Starts a new post for you
+research/              GENERATED. Never edit, never commit. Rebuilt every deploy.
+```
+
+### Doing it with Claude Code
+
+`_research/weekly-research-prompt.md` holds a prompt you can paste into Claude
+Code each week. It walks through picking the topic, pulling real data, writing
+the post, building the chart, and opening the PR.
+
+### Writing a post
+
+**On github.com (no terminal):** open `_research/posts/_template/index.md`,
+copy its contents, then **Add file** > **Create new file** and name it
+`_research/posts/2026-09-28-your-slug/index.md`. Typing the slash creates the
+folder. Upload images into that same folder.
+
+**On your computer:** `npm run new -- "Your headline"` creates the folder and
+file, dated next Monday, with the next pillar in the rotation already filled
+in. Add `--pillar macro` to override.
+
+The top of every post:
+
+```yaml
+---
+title: "Why skew steepens into earnings"
+summary: "One or two sentences for cards and link previews."
+date: 2026-09-28
+pillar: options          # options, vol-rates, market-structure, or macro
+author: Alex Arnold      # or [Alex Arnold, Breeana Tran]
+draft: true              # delete this line to publish
+---
+```
+
+The body is ordinary Markdown. Math uses `$inline$` and `$$display$$` (LaTeX
+syntax). An image with a caption is
+`![alt text](chart.png "Figure 1. Caption. Source: CBOE.")`.
+
+### Publishing
+
+Delete `draft: true`, commit, push. Netlify rebuilds in about a minute. The
+research index, the pillar page, the RSS feed, and the sitemap all update on
+their own. A disclaimer (educational only, not investment advice, simulated
+trades, not CU Boulder's views) is added to every post automatically, so do
+not paste one in.
+
+### Previewing before you publish
+
+```
+npm install          # once
+npm run preview      # builds including drafts, then serves http://localhost:8000
+```
+
+Drafts show a Draft chip in preview. Never deploy a preview build; Netlify
+runs its own clean build that leaves drafts out.
+
+### Charts
+
+Charts are just image files. For a consistent look, use the club style:
+
+```python
+import matplotlib.pyplot as plt
+plt.style.use("_research/orca.mplstyle")
+# ... plot ...
+fig.savefig("_research/posts/2026-09-28-your-slug/chart.png", dpi=200, bbox_inches="tight")
+```
+
+Ink is the first series and gold the second. Save gold for the one line that
+matters. Always cite the data source in the caption.
+
+### If the deploy fails
+
+The build checks every post and stops with a plain message naming the file
+and the problem, for example a missing summary or a misspelled pillar. Open
+the failed deploy log in Netlify, fix that file, push again. The live site
+keeps serving the last good version until then, so nothing breaks publicly.
+
+### Before a post goes live, check
+
+- The takeaway is in the first paragraph.
+- Every number and chart has a source.
+- Nothing reads as "buy this" or "sell that". Describe how a structure
+  behaves, not what someone should do with their money.
+- A "Risks and what would change the view" section closes it out.
+

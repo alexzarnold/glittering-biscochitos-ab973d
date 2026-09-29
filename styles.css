@@ -960,3 +960,58 @@ legend { padding: 0 var(--s-2); font-size: var(--f-small); font-weight: 600; }
   font-size: var(--f-small);
   letter-spacing: 0.02em;
 }
+
+/* ============================================================
+   RESEARCH  (pages generated from _research/ by npm run build)
+   ============================================================ */
+.pillar-nav { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-6); }
+.pillar-nav .chip { text-decoration: none; padding: 0.35rem 0.75rem; transition: border-color .2s ease, color .2s ease; }
+.pillar-nav .chip:hover { border-color: var(--gold-ink); color: var(--gold-ink); }
+.pillar-nav .chip.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+
+.post-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.post-card { padding: var(--s-5) 0; border-bottom: 1px solid var(--rule); }
+.post-card__meta { margin: 0 0 var(--s-3); display: flex; gap: var(--s-2); flex-wrap: wrap; }
+.chip--pillar { border-color: var(--gold-ink); color: var(--gold-ink); text-decoration: none; }
+.post-card__title { font-family: var(--font-display); font-size: var(--f-h3); font-size: clamp(1.4rem, 4vw, 1.75rem); margin: 0 0 var(--s-2); }
+.post-card__title a { text-decoration: none; }
+.post-card__title a:hover { color: var(--gold-ink); }
+.post-card__summary { color: var(--muted); margin: 0 0 var(--s-2); max-width: 60ch; }
+.post-card__byline, .post-head__meta { font-size: var(--f-tiny); color: var(--muted); margin: 0; }
+
+.post-head .label a { color: inherit; text-decoration: none; }
+.post-head .h1 { max-width: 22ch; }
+.page-head .post-head__summary { font-size: var(--f-lead); line-height: 1.5; max-width: 52ch; margin-bottom: var(--s-4); }
+.page-head .post-head__meta { color: var(--muted-dark); }
+
+.prose { font-size: 1.0625rem; line-height: 1.75; }
+.prose > * { max-width: 68ch; }
+.prose h2 { font-family: var(--font-display); font-size: var(--f-h2); margin: var(--s-7) 0 var(--s-4); }
+.prose h3 { font-size: var(--f-h3); margin: var(--s-6) 0 var(--s-3); }
+.prose > h2:first-child, .prose > h3:first-child { margin-top: 0; }
+.prose a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--gold); }
+.prose a:hover { color: var(--gold-ink); border-bottom-width: 2px; }
+.prose li { margin-bottom: var(--s-2); }
+.prose blockquote { margin: var(--s-5) 0; padding-left: var(--s-5); border-left: 2px solid var(--gold); color: var(--muted); font-style: italic; }
+.prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: var(--paper-2); padding: 0.1em 0.35em; border-radius: var(--radius); }
+.prose pre { background: var(--ink); color: var(--paper); padding: var(--s-4); overflow-x: auto; border-radius: var(--radius); font-size: 0.875rem; }
+.prose pre code { background: none; padding: 0; color: inherit; }
+.prose table { display: block; overflow-x: auto; border-collapse: collapse; margin: var(--s-5) 0; font-size: var(--f-small); font-variant-numeric: tabular-nums; }
+.prose th, .prose td { padding: var(--s-2) var(--s-4) var(--s-2) 0; border-bottom: 1px solid var(--rule); text-align: left; white-space: nowrap; }
+.prose th { font-size: var(--f-label); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--line-ui); }
+.prose .katex-display { overflow-x: auto; overflow-y: hidden; padding: var(--s-2) 0; margin: var(--s-5) 0; }
+.post-figure { margin: var(--s-6) 0; max-width: none; }
+.post-figure img { width: 100%; border: 1px solid var(--rule); border-radius: var(--radius); background: #fff; }
+.post-figure figcaption { font-size: var(--f-tiny); color: var(--muted); margin-top: var(--s-2); }
+
+.post-disclaimer { margin-top: var(--s-7); padding: var(--s-4) var(--s-5); border-top: 2px solid var(--gold); background: var(--paper-2); font-size: var(--f-tiny); color: var(--muted); }
+.post-disclaimer p { margin: 0; }
+.post-disclaimer a { color: inherit; }
+
+.post-pager { display: grid; gap: var(--s-4); margin-top: var(--s-6); }
+@media (min-width: 40rem) { .post-pager { grid-template-columns: 1fr 1fr; } }
+.post-pager a { display: block; text-decoration: none; padding: var(--s-4) 0; border-top: 1px solid var(--rule); font-weight: 600; }
+.post-pager a span { display: block; font-size: var(--f-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); margin-bottom: var(--s-1); font-weight: 600; }
+.post-pager a:hover { color: var(--gold-ink); }
+.post-pager .next { text-align: right; }
+.post-back { margin-top: var(--s-5); font-size: var(--f-small); }

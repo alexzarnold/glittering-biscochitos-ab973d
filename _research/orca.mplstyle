@@ -1,0 +1,34 @@
+# ORCA chart style for matplotlib.
+#   import matplotlib.pyplot as plt
+#   plt.style.use("_research/orca.mplstyle")
+# Save charts at 2x for sharp screens:  fig.savefig("chart.png", dpi=200, bbox_inches="tight")
+# Series order: ink first, gold second, then grays. Gold is the highlight, use it for the one line that matters.
+
+axes.prop_cycle: cycler('color', ['141414', 'CAAD5F', '8A857C', '816928', 'C9C4BB'])
+figure.figsize: 8, 4.5
+figure.facecolor: FAF9F7
+savefig.facecolor: FAF9F7
+axes.facecolor: FAF9F7
+axes.edgecolor: 8A857C
+axes.linewidth: 0.8
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: True
+axes.grid.axis: y
+grid.color: E2DED7
+grid.linewidth: 0.8
+axes.titlesize: 13
+axes.titleweight: 600
+axes.titlelocation: left
+axes.titlepad: 12
+axes.labelsize: 10
+axes.labelcolor: 55514B
+xtick.color: 55514B
+ytick.color: 55514B
+xtick.labelsize: 9
+ytick.labelsize: 9
+lines.linewidth: 2
+legend.frameon: False
+legend.fontsize: 9
+font.family: sans-serif
+font.sans-serif: Inter, Helvetica, Arial, DejaVu Sans
