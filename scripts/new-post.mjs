@@ -36,7 +36,10 @@ if (!config.pillars.some(p => p.slug === pillar)) {
 }
 
 const d = new Date(); d.setDate(d.getDate() + ((8 - d.getDay()) % 7 || 7));
-const date = d.toISOString().slice(0, 10);
+// Format in local time. toISOString() converts to UTC, which rolls the date
+// forward a day when this runs in the evening in U.S. time zones.
+const pad = n => String(n).padStart(2, "0");
+const date = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 const slug = title.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
 const dir = path.join(POSTS, `${date}-${slug}`);
 if (fs.existsSync(dir)) { console.error(`Already exists: ${dir}`); process.exit(1); }
