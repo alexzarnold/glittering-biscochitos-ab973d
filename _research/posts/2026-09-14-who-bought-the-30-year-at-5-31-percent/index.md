@@ -3,7 +3,7 @@ title: "Who bought the 30-year at 5.31%"
 summary: "At last week's 30-year Treasury auction, primary dealers were awarded 2.2% of the bonds, the lowest share in at least 17 years. How a Treasury auction works, what the dealer share measures, and what it can and cannot tell you about who is buying long bonds at these yields."
 date: 2026-09-14
 pillar: market-structure
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

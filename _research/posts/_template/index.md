@@ -3,7 +3,7 @@ title: "Write the headline here"
 summary: "One or two sentences. Shown on the research page and in LinkedIn and iMessage link previews."
 date: 2026-09-28
 pillar: options
-author: Alex Arnold
+author: ORCA
 draft: true
 ---
 

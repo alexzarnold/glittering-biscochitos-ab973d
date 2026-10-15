@@ -3,7 +3,7 @@ title: "What a covered call costs you in a year like this one"
 summary: "Cboe's buy-write index trails the S&P 500 by 2.15 points so far in 2026. Ten years of option cycles show where that gap comes from, and why the payment for accepting it is now the smallest of the year."
 date: 2026-09-28
 pillar: options
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

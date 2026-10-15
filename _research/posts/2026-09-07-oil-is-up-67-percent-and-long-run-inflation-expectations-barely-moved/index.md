@@ -3,7 +3,7 @@ title: "Oil is up 67% and long-run inflation expectations barely moved"
 summary: "The 10-year Treasury yield is up 60 basis points this year. Only 10 of those came from higher inflation expectations. Splitting a nominal yield into its real and inflation parts shows the bond market treating the oil shock as temporary, and the Fed as the thing to worry about."
 date: 2026-09-07
 pillar: vol-rates
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

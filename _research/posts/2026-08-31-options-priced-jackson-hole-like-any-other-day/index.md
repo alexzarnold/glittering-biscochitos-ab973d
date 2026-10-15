@@ -3,7 +3,7 @@ title: "Options priced Jackson Hole like any other day"
 summary: "The night before Chair Warsh spoke, S&P 500 options priced a 0.61% move, cheaper than an ordinary day in 2026. Stocks moved 0.25%. The two-year yield moved 14 basis points. What an event's implied move is, how to read it, and why being right about an event is not the same as being right about your underlying."
 date: 2026-08-31
 pillar: options
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

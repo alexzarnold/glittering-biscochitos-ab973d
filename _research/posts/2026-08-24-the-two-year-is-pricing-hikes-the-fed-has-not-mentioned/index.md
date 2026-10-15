@@ -3,7 +3,7 @@ title: "The two-year is pricing hikes the Fed has not mentioned"
 summary: "The Fed has held at 3.50 to 3.75% all year and said nothing about raising rates. The two-year yield sits 61 basis points above the funds rate anyway. Here is how to read what that spread is saying, and how much of it to believe."
 date: 2026-08-24
 pillar: macro
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

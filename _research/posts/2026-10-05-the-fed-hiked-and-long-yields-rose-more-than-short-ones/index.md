@@ -3,7 +3,7 @@ title: "The Fed hiked and long yields rose more than short ones"
 summary: "After a rate hike the yield curve usually flattens. Since the September 16 hike it has steepened, by more than after all but one of the 51 hikes since 1994. About half the move in the 10-year is term premium, now at its highest since 2010."
 date: 2026-10-05
 pillar: vol-rates
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway

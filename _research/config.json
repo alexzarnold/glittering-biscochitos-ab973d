@@ -1,6 +1,6 @@
 {
   "siteUrl": "https://orcacuboulder.netlify.app",
-  "defaultAuthor": "Alex Arnold",
+  "defaultAuthor": "ORCA",
   "pillars": [
     { "slug": "options",          "name": "Options Strategies",       "blurb": "Structures, payoffs, and how a trade behaves as the Greeks move." },
     { "slug": "vol-rates",        "name": "Volatility and Rates",     "blurb": "Implied versus realized, term structure, skew, and the rates curve." },

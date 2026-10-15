@@ -538,7 +538,7 @@ title: "Why skew steepens into earnings"
 summary: "One or two sentences for cards and link previews."
 date: 2026-09-28
 pillar: options          # options, vol-rates, market-structure, or macro
-author: Alex Arnold      # or [Alex Arnold, Breeana Tran]
+author: ORCA             # or a name, or [Alex Arnold, Breeana Tran]
 draft: true              # delete this line to publish
 ---
 ```

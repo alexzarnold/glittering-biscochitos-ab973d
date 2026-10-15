@@ -12,7 +12,7 @@ will skip step 1.
 ```
 You are helping me write and publish this week's ORCA research post. ORCA is a
 student derivatives club at CU Boulder (Options, Risk, and Capital Association).
-I am Alex Arnold, the president, and I am the author unless I say otherwise.
+I am Alex Arnold, the president. Posts are bylined "ORCA" unless I say otherwise.
 
 REPO CONTEXT
 - This is a plain HTML site. The only generated part is /research, built from

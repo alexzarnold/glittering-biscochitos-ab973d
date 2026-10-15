@@ -3,7 +3,7 @@ title: "The Fed hiked because its inflation gauge reads 3.3%"
 summary: "Core CPI is 2.45%, close enough to target that an oil shock looks like something to wait out. The Fed raised rates anyway, and its own numbers explain why: core PCE is 3.34%, and even after the hike, policy sits below the Fed's own estimate of neutral."
 date: 2026-09-21
 pillar: macro
-author: Alex Arnold
+author: ORCA
 ---
 
 ## The takeaway
